@@ -59,7 +59,7 @@ img {
 
 .section-title h2 {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 10px;
     position: relative;
     display: inline-block;
@@ -97,7 +97,7 @@ img {
 
 .secondary-btn {
     background-color: transparent;
-    color: var(--primary-color);
+    color: var(--light-color);
     border: 2px solid var(--primary-color);
 }
 
@@ -126,6 +126,10 @@ img {
 
 .read-more:hover i {
     transform: translateX(-5px);
+}
+
+.news {
+    color: black;
 }
 
 /* ===== القائمة العلوية ===== */
@@ -250,6 +254,7 @@ nav {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -295,14 +300,17 @@ nav {
 }
 
 .stat-item:hover {
+    background-color: var(--gray-color);
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 .stat-item i {
     font-size: 2.5rem;
     color: var(--primary-color);
     margin-bottom: 15px;
+
 }
 
 .stat-item h3 {
@@ -313,6 +321,11 @@ nav {
 
 .stat-item p {
     color: var(--gray-color);
+    font-size: 1.1rem;
+}
+
+.stat-item:hover p {
+    color: var(--light-gray);
     font-size: 1.1rem;
 }
 
@@ -346,13 +359,14 @@ nav {
     left: 0;
     width: 100%;
     height: 0;
-    background-color: var(--light-color);
+    background-color: var(--secondary-color);
     z-index: -1;
     transition: var(--transition);
 }
 
+
 .link-card:hover::before {
-    height: 100%;
+    height: 50%;
 }
 
 .link-card:hover {
@@ -1305,19 +1319,19 @@ footer {
     .links-container {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .news-container {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .members-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    
+
     .activities-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .values-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1327,60 +1341,60 @@ footer {
     .hero-content h2 {
         font-size: 2.5rem;
     }
-    
+
     .about-content {
         flex-direction: column;
     }
-    
+
     .footer-content {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+
     .members-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .donation-methods {
         grid-template-columns: 1fr;
     }
-    
+
     .contact-info {
         grid-template-columns: 1fr;
     }
-    
+
     .contact-form-map {
         grid-template-columns: 1fr;
     }
-    
+
     .vision-mission {
         grid-template-columns: 1fr;
     }
-    
+
     .timeline::after {
         left: 31px;
         right: auto;
     }
-    
+
     .timeline-item {
         width: 100%;
         padding-left: 70px;
         padding-right: 25px;
     }
-    
+
     .timeline-item::after {
         left: 15px;
         right: auto;
     }
-    
+
     .timeline-item.right {
         left: 0;
     }
-    
+
     .timeline-item.right::after {
         left: 15px;
     }
-    
+
     .timeline-content .date {
         right: auto;
         left: 0;
@@ -1391,7 +1405,7 @@ footer {
     .menu-toggle {
         display: block;
     }
-    
+
     .main-menu {
         position: fixed;
         top: 80px;
@@ -1405,43 +1419,43 @@ footer {
         transition: var(--transition);
         z-index: 999;
     }
-    
+
     .main-menu.active {
         right: 0;
     }
-    
+
     .hero-content h2 {
         font-size: 2rem;
     }
-    
+
     .cta-buttons {
         flex-direction: column;
     }
-    
+
     .links-container {
         grid-template-columns: 1fr;
     }
-    
+
     .news-container {
         grid-template-columns: 1fr;
     }
-    
+
     .members-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .activities-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .form-row {
         grid-template-columns: 1fr;
     }
-    
+
     .activities-filter {
         flex-wrap: wrap;
     }
-    
+
     .values-grid {
         grid-template-columns: 1fr;
     }
