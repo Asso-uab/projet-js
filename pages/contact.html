@@ -25,6 +25,9 @@
                     <li><a href="donations.html">التبرعات والمساعدات</a></li>
                     <li class="active"><a href="contact.html">تواصل معنا</a></li>
                     <li><a href="about.html">من نحن</a></li>
+                    <li> <a id="themeToggle">
+                        <i id="themeIcon" class="fas fa-sun"></i>
+                    </a></li>
                 </ul>
                 <div class="menu-toggle">
                     <i class="fas fa-bars"></i>
@@ -149,7 +152,10 @@
             <!-- خريطة الموقع -->
             <div class="map-container scroll-animation">
                 <h3>موقعنا على الخريطة</h3>
-                <div id="map"></div>
+                <div id="map">
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d860.1180635084634!2d-9.589460368221346!3d30.422711757529676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3b65f59a36f19%3A0x588052053074d242!2sCCF6%2B47H%2C%20Agadir%2080000!5e0!3m2!1sen!2sma!4v1744901046494!5m2!1sen!2sma" width="1300" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
             </div>
             
             <!-- الأسئلة الشائعة -->
@@ -269,7 +275,7 @@
     </footer>
 
     <!-- Google Maps API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+  
     <script src="../js/main.js"></script>
     <script>
         // تفعيل الأسئلة الشائعة
