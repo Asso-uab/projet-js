@@ -28,6 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.faq-item')) {
         initFAQToggle();
     }
+    
+    // تفعيل الوضع المظلم
+    initDarkMode();
 });
 
 /**
@@ -94,6 +97,9 @@ function initScrollProgress() {
         progressBar.style.width = scrollPercentage + '%';
     });
 }
+
+
+
 
 /**
  * تفعيل أزرار التصفية في صفحة الأنشطة
@@ -196,7 +202,7 @@ function initFAQToggle() {
 }
 
 /**
- * تهيئة خريطة Google Maps
+ * تهيئة خريط Google Maps
  */
 function initMap() {
     // التحقق من وجود عنصر الخريطة
@@ -277,28 +283,23 @@ function initMap() {
             animation: google.maps.Animation.DROP
         });
         
-        // إضافة نافذة معلومات
         const infoWindow = new google.maps.InfoWindow({
             content: '<div class="map-info-window"><h3>جمعية الأمل التنموية</h3><p>شارع الأمل، حي السلام، المدينة</p></div>'
         });
         
-        // فتح نافذة المعلومات عند النقر على العلامة
         marker.addListener('click', function() {
             infoWindow.open(map, marker);
         });
     }
 }
 
-/**
- * التحقق من صحة نموذج التواصل
- */
+
 function validateContactForm() {
     const name = document.getElementById('contact-name');
     const email = document.getElementById('contact-email');
     const message = document.getElementById('contact-message');
     let isValid = true;
     
-    // التحقق من الاسم
     if (!name.value.trim()) {
         alert('الرجاء إدخال الاسم الكامل');
         name.focus();
@@ -306,7 +307,6 @@ function validateContactForm() {
         return isValid;
     }
     
-    // التحقق من البريد الإلكتروني
     if (!email.value.trim()) {
         alert('الرجاء إدخال البريد الإلكتروني');
         email.focus();
@@ -319,7 +319,6 @@ function validateContactForm() {
         return isValid;
     }
     
-    // التحقق من الرسالة
     if (!message.value.trim()) {
         alert('الرجاء إدخال نص الرسالة');
         message.focus();
@@ -327,7 +326,6 @@ function validateContactForm() {
         return isValid;
     }
     
-    // إذا كان النموذج صحيحاً
     if (isValid) {
         alert('تم إرسال رسالتك بنجاح. سنتواصل معك قريباً.');
     }
@@ -335,9 +333,7 @@ function validateContactForm() {
     return isValid;
 }
 
-/**
- * التحقق من صحة نموذج التبرع
- */
+
 function validateDonationForm() {
     const name = document.getElementById('donor-name');
     const email = document.getElementById('donor-email');
@@ -345,7 +341,6 @@ function validateDonationForm() {
     const amount = document.getElementById('custom-amount');
     let isValid = true;
     
-    // التحقق من الاسم
     if (!name.value.trim()) {
         alert('الرجاء إدخال الاسم الكامل');
         name.focus();
@@ -353,7 +348,6 @@ function validateDonationForm() {
         return isValid;
     }
     
-    // التحقق من البريد الإلكتروني
     if (!email.value.trim()) {
         alert('الرجاء إدخال البريد الإلكتروني');
         email.focus();
@@ -366,7 +360,6 @@ function validateDonationForm() {
         return isValid;
     }
     
-    // التحقق من رقم الهاتف
     if (!phone.value.trim()) {
         alert('الرجاء إدخال رقم الهاتف');
         phone.focus();
@@ -374,7 +367,6 @@ function validateDonationForm() {
         return isValid;
     }
     
-    // التحقق من مبلغ التبرع
     if (!amount.value.trim() || isNaN(amount.value) || amount.value <= 0) {
         alert('الرجاء إدخال مبلغ تبرع صحيح');
         amount.focus();
@@ -382,7 +374,6 @@ function validateDonationForm() {
         return isValid;
     }
     
-    // إذا كان النموذج صحيحاً
     if (isValid) {
         alert('تم تسجيل تبرعك بنجاح. شكراً لدعمك لجمعية الأمل التنموية.');
     }
@@ -390,35 +381,25 @@ function validateDonationForm() {
     return isValid;
 }
 
-/**
- * التحقق من صحة البريد الإلكتروني
- */
+
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
 }
 
-/**
- * تفعيل شريط التمرير السلس
- */
 function initSmoothScroll() {
-    // الحصول على جميع الروابط التي تبدأ بـ #
     const links = document.querySelectorAll('a[href^="#"]');
     
     links.forEach(link => {
         link.addEventListener('click', function(e) {
-            // منع السلوك الافتراضي للرابط
             e.preventDefault();
             
-            // الحصول على الهدف
             const targetId = this.getAttribute('href');
             
-            // التحقق من أن الهدف ليس #
             if (targetId !== '#') {
                 const targetElement = document.querySelector(targetId);
                 
                 if (targetElement) {
-                    // التمرير إلى الهدف بشكل سلس
                     window.scrollTo({
                         top: targetElement.offsetTop - 100,
                         behavior: 'smooth'
@@ -429,14 +410,11 @@ function initSmoothScroll() {
     });
 }
 
-/**
- * تفعيل عداد الإحصائيات
- */
+
 function initCounters() {
     const counters = document.querySelectorAll('.counter');
     
     if (counters.length > 0) {
-        // دالة للتحقق من ظهور العنصر في نطاق الرؤية
         function isElementInViewport(el) {
             const rect = el.getBoundingClientRect();
             return (
@@ -445,15 +423,14 @@ function initCounters() {
             );
         }
         
-        // دالة لبدء العد
         function startCounting() {
             counters.forEach(counter => {
                 if (isElementInViewport(counter) && !counter.classList.contains('counted')) {
                     counter.classList.add('counted');
                     
                     const target = parseInt(counter.getAttribute('data-count'));
-                    const duration = 2000; // مدة العد بالمللي ثانية
-                    const step = Math.ceil(target / (duration / 20)); // خطوة العد
+                    const duration = 2000; 
+                    const step = Math.ceil(target / (duration / 20)); 
                     
                     let current = 0;
                     const timer = setInterval(() => {
@@ -470,17 +447,13 @@ function initCounters() {
             });
         }
         
-        // بدء العد عند تحميل الصفحة
         startCounting();
         
-        // بدء العد عند التمرير
         window.addEventListener('scroll', startCounting);
     }
 }
 
-/**
- * تفعيل شريط البحث
- */
+
 function initSearchBar() {
     const searchIcon = document.querySelector('.search-icon');
     const searchBar = document.querySelector('.search-bar');
@@ -489,13 +462,11 @@ function initSearchBar() {
         searchIcon.addEventListener('click', function() {
             searchBar.classList.toggle('active');
             
-            // التركيز على حقل البحث عند فتحه
             if (searchBar.classList.contains('active')) {
                 searchBar.querySelector('input').focus();
             }
         });
         
-        // إغلاق شريط البحث عند النقر خارجه
         document.addEventListener('click', function(e) {
             if (!searchBar.contains(e.target) && !searchIcon.contains(e.target) && searchBar.classList.contains('active')) {
                 searchBar.classList.remove('active');
@@ -504,17 +475,13 @@ function initSearchBar() {
     }
 }
 
-/**
- * تفعيل زر العودة إلى الأعلى
- */
+
 function initBackToTop() {
-    // إنشاء زر العودة إلى الأعلى
     const backToTopButton = document.createElement('button');
     backToTopButton.className = 'back-to-top';
     backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
     document.body.appendChild(backToTopButton);
     
-    // إظهار/إخفاء الزر عند التمرير
     window.addEventListener('scroll', function() {
         if (window.pageYOffset > 300) {
             backToTopButton.classList.add('active');
@@ -523,7 +490,6 @@ function initBackToTop() {
         }
     });
     
-    // التمرير إلى الأعلى عند النقر على الزر
     backToTopButton.addEventListener('click', function() {
         window.scrollTo({
             top: 0,
@@ -532,9 +498,7 @@ function initBackToTop() {
     });
 }
 
-/**
- * تفعيل شريط التنقل الثابت عند التمرير
- */
+
 function initStickyHeader() {
     const header = document.querySelector('header');
     const headerHeight = header.offsetHeight;
@@ -548,14 +512,11 @@ function initStickyHeader() {
     });
 }
 
-/**
- * تفعيل معرض الصور
- */
+
 function initGallery() {
     const galleryItems = document.querySelectorAll('.gallery-item');
     
     if (galleryItems.length > 0) {
-        // إنشاء عنصر العرض المكبر
         const lightbox = document.createElement('div');
         lightbox.className = 'lightbox';
         lightbox.innerHTML = `
@@ -571,7 +532,6 @@ function initGallery() {
         `;
         document.body.appendChild(lightbox);
         
-        // الحصول على عناصر العرض المكبر
         const lightboxImage = lightbox.querySelector('.lightbox-image');
         const lightboxCaption = lightbox.querySelector('.lightbox-caption');
         const closeButton = lightbox.querySelector('.close');
@@ -580,7 +540,6 @@ function initGallery() {
         
         let currentIndex = 0;
         
-        // فتح العرض المكبر عند النقر على صورة
         galleryItems.forEach((item, index) => {
             item.addEventListener('click', function() {
                 currentIndex = index;
@@ -591,20 +550,17 @@ function initGallery() {
                 lightboxCaption.textContent = imgCaption;
                 lightbox.style.display = 'flex';
                 
-                // تعطيل التمرير في الصفحة
                 document.body.style.overflow = 'hidden';
             });
         });
         
-        // إغلاق العرض المكبر
         closeButton.addEventListener('click', function() {
             lightbox.style.display = 'none';
             
-            // إعادة تفعيل التمرير في الصفحة
             document.body.style.overflow = 'auto';
         });
         
-        // الانتقال إلى الصورة السابقة
+        
         prevButton.addEventListener('click', function() {
             currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
             const imgSrc = galleryItems[currentIndex].querySelector('img').getAttribute('src');
@@ -614,7 +570,7 @@ function initGallery() {
             lightboxCaption.textContent = imgCaption;
         });
         
-        // الانتقال إلى الصورة التالية
+        
         nextButton.addEventListener('click', function() {
             currentIndex = (currentIndex + 1) % galleryItems.length;
             const imgSrc = galleryItems[currentIndex].querySelector('img').getAttribute('src');
@@ -624,43 +580,62 @@ function initGallery() {
             lightboxCaption.textContent = imgCaption;
         });
         
-        // إغلاق العرض المكبر عند النقر خارج الصورة
         lightbox.addEventListener('click', function(e) {
             if (e.target === lightbox) {
                 lightbox.style.display = 'none';
                 
-                // إعادة تفعيل التمرير في الصفحة
                 document.body.style.overflow = 'auto';
             }
         });
         
-        // التنقل بين الصور باستخدام لوحة المفاتيح
         document.addEventListener('keydown', function(e) {
             if (lightbox.style.display === 'flex') {
                 if (e.key === 'ArrowLeft') {
-                    // السهم الأيسر: الصورة السابقة
                     prevButton.click();
                 } else if (e.key === 'ArrowRight') {
-                    // السهم الأيمن: الصورة التالية
                     nextButton.click();
                 } else if (e.key === 'Escape') {
-                    // زر Escape: إغلاق العرض المكبر
                     closeButton.click();
                 }
             }
         });
     }
 }
-
-// تفعيل الوظائف الإضافية عند تحميل الصفحة
-document.addEventListener('DOMContentLoaded', function() {
-    // الوظائف الأساسية تم تفعيلها في بداية الملف
+/**
+ * تفعيل الوضع المظلم
+ */
+function initDarkMode() {
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
     
-    // تفعيل الوظائف الإضافية
-    initSmoothScroll();
-    initCounters();
-    initSearchBar();
-    initBackToTop();
-    initStickyHeader();
-    initGallery();
-});
+    // التحقق من وجود تفضيل محفوظ
+    const savedTheme = localStorage.getItem('theme');
+    
+    // تطبيق الوضع المحفوظ إن وجد
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+    }
+    
+    // إضافة حدث النقر لزر تبديل الوضع
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+            // تبديل الوضع
+            document.body.classList.toggle('dark-mode');
+            
+            // تغيير الأيقونة
+            if (document.body.classList.contains('dark-mode')) {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    }
+}
+
+
