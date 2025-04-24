@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الجمعية التنموية | الصفحة الرئيسية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- القائمة العلوية -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="./img/images.jpeg" alt="شعار الجمعية">
+                <h1>جمعية الأمل </h1>
+            </div>
+            <nav>
+                <ul class="main-menu">
+                    <li class="active"><a href="index.html">الرئيسية</a></li>
+                    <li><a href="pages/members.html">الأعضاء</a></li>
+                    <li><a href="pages/activities.html">الأنشطة والأخبار</a></li>
+                    <li><a href="pages/donations.html">التبرعات والمساعدات</a></li>
+                    <li><a href="pages/contact.html">تواصل معنا</a></li>
+                    <li><a href="pages/about.html">من نحن</a></li>
+                     <!-- Replace the incorrect <r> tag with <a> tag -->
+                    <li class="darck"> <a id="themeToggle">
+                        <i id="themeIcon" class="fas fa-sun"></i>
+                    </a></li>
+
+
+
+                    <li class="lang-switch">
+                        <div class="language-selector">
+                            <a class="lang-btn active" data-lang="ar">Ar</a>
+                            <span class="lang-separator">|</span>
+                            <a class="lang-btn" data-lang="fr">Fr</a>
+                        </div>
+                    </li>
+
+                   
+                    <script src="js/translation.js"></script> <!-- Pour les pages à la racine -->
+
+
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- البانر الترحيبي -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h2>معاً نبني مستقبلاً أفضل</h2>
+                <p>جمعية الأمل  تسعى لتحسين حياة المجتمع من خلال مشاريع تنموية مستدامة</p>
+                <div class="cta-buttons">
+                    <a href="pages/donations.html" class="btn primary-btn">تبرع الآن</a>
+                    <a href="pages/about.html" class="btn primary-btn">تعرف علينا</a> <!--btn secondary-btn -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- تعريف مختصر بالجمعية -->
+    <section class="about-brief">
+        <div class="container">
+            <div class="section-title">
+                <h2>من نحن</h2>
+                <span class="separator"></span>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>جمعية الأمل  هي منظمة غير ربحية تأسست عام 2010، تهدف إلى تحسين الظروف المعيشية للمجتمعات المحلية من خلال مشاريع تنموية مستدامة في مجالات التعليم، الصحة، البيئة والتمكين الاقتصادي.</p>
+                    <p>نعمل بشراكة مع المجتمعات المحلية والمؤسسات الحكومية والخاصة لتحقيق تنمية شاملة ومستدامة.</p>
+                    <a href="pages/about.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <h3>+5000</h3>
+                        <p>مستفيد</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-project-diagram"></i>
+                        <h3>+120</h3>
+                        <p>مشروع</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>+25</h3>
+                        <p>منطقة</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-hands-helping"></i>
+                        <h3>+200</h3>
+                        <p>متطوع</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- روابط سريعة -->
+    <section class="quick-links">
+        <div class="container">
+            <div class="section-title">
+                <h2>خدماتنا</h2>
+                <span class="separator"></span>
+            </div>
+            <div class="links-container">
+                <div class="link-card">
+                    <div class="icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>التعليم</h3>
+                    <p>برامج دعم التعليم ومحو الأمية وتطوير المهارات</p>
+                    <a href="pages/activities.html#education" class="card-link">المزيد</a>
+                </div>
+                <div class="link-card">
+                    <div class="icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>الصحة</h3>
+                    <p>حملات توعية صحية وقوافل طبية للمناطق النائية</p>
+                    <a href="pages/activities.html#health" class="card-link">المزيد</a>
+                </div>
+                <div class="link-card">
+                    <div class="icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>البيئة</h3>
+                    <p>مشاريع حماية البيئة والتشجير والتوعية البيئية</p>
+                    <a href="pages/activities.html#environment" class="card-link">المزيد</a>
+                </div>
+                <div class="link-card">
+                    <div class="icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>التمكين الاقتصادي</h3>
+                    <p>دعم المشاريع الصغيرة وتدريب الشباب</p>
+                    <a href="pages/activities.html#economic" class="card-link">المزيد</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- آخر الأخبار -->
+    <section class="latest-news">
+        <div class="container">
+            <div class="section-title">
+                <h2>آخر الأخبار</h2>
+                <span class="separator"></span>
+            </div>
+            <div class="news-container">
+                <div class="news-card">
+                    <div class="news-img">
+                        <img src="./img/image.png" alt="صورة الخبر">
+                        <div class="date">
+                            <span>15</span>
+                            <span>يونيو</span>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <h3>افتتاح مركز تدريب مهني جديد</h3>
+                        <p>تم افتتاح مركز تدريب مهني جديد في منطقة الأمل لتدريب الشباب على المهارات المطلوبة في سوق العمل...</p>
+                        <a href="pages/activities.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-img">
+                        <img src="./img/arbe.webp" alt="صورة الخبر">
+                        <div class="date">
+                            <span>10</span>
+                            <span>يونيو</span>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <h3>حملة تشجير في المنطقة الشرقية</h3>
+                        <p>نظمت الجمعية حملة تشجير واسعة في المنطقة الشرقية بمشاركة أكثر من 100 متطوع وزراعة 500 شجرة...</p>
+                        <a href="pages/activities.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-img">
+                        <img src="./img/قافلة-طبية-جهوية.jpg" alt="صورة الخبر">
+                        <div class="date">
+                            <span>5</span>
+                            <span>يونيو</span>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <h3>قافلة طبية تصل إلى قرية النور</h3>
+                        <p>وصلت القافلة الطبية التي نظمتها الجمعية إلى قرية النور وقدمت خدمات طبية لأكثر من 300 مواطن...</p>
+                        <a href="pages/activities.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="pages/activities.html" class="btn secondary-btn">عرض جميع الأخبار</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- أماكن الأنشطة على خريطة تفاعلية -->
+    <section class="activities-map">
+        <div class="container">
+            <div class="section-title">
+                <h2>أماكن أنشطتنا</h2>
+                <span class="separator"></span>
+            </div>
+            <div class="map-container">
+                <div id="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d860.1180635084634!2d-9.589460368221346!3d30.422711757529676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3b65f59a36f19%3A0x588052053074d242!2sCCF6%2B47H%2C%20Agadir%2080000!5e0!3m2!1sen!2sma!4v1744901046494!5m2!1sen!2sma" width="1300" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- نموذج الاشتراك في النشرة البريدية -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>اشترك في نشرتنا البريدية</h3>
+                <p>احصل على آخر أخبار وأنشطة الجمعية مباشرة على بريدك الإلكتروني</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="البريد الإلكتروني" required>
+                    <button type="submit" class="btn primary-btn">اشتراك</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <img src="./img/images.jpeg" alt="شعار الجمعية">
+                    <p>جمعية الأمل  تعمل على تحسين حياة المجتمعات المحلية من خلال مشاريع تنموية مستدامة.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="pages/members.html">الأعضاء</a></li>
+                        <li><a href="pages/activities.html">الأنشطة والأخبار</a></li>
+                        <li><a href="pages/donations.html">التبرعات والمساعدات</a></li>
+                        <li><a href="pages/contact.html">تواصل معنا</a></li>
+                        <li><a href="pages/about.html">من نحن</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>تواصل معنا</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i>كلية متعددة التخصصات تارودانت</li>
+                        <li><i class="fas fa-phone"></i> 704959711 212+</li>
+                        <li><i class="fas fa-envelope"></i> info@alamal-association.org</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة &copy; 2025 - جمعية الأمل </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
+    <script src="js/main.js"></script>
+</body>
+</html>
