@@ -40,8 +40,6 @@
 
 /* ... existing code ... */
 
-
-
 * {
     margin: 0;
     padding: 0;
@@ -57,7 +55,7 @@ body {
     line-height: 1.6;
     color: var(--black-colors);
     background-color: var(--white-color);
-    direction: rtl;
+   
 }
 
 .container {
@@ -201,7 +199,7 @@ nav {
 
 .main-menu {
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 .main-menu li a {
@@ -210,7 +208,7 @@ nav {
     position: relative;
 }
 
-.main-menu li a::after {
+.main-menu li:not(.darck) a::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -1636,3 +1634,167 @@ footer {
 }
 
 /* dark:: */
+
+
+
+
+
+
+/* ===== Configuration pour la direction du texte selon la langue ===== */
+html[lang="ar"] {
+    direction: rtl;
+}
+
+html[lang="fr"] {
+    direction: ltr;
+}
+
+/* Configuration de base du corps du document */
+body {
+    font-family: 'Tajawal', 'Cairo', sans-serif;
+    line-height: 1.6;
+    color: var(--black-colors);
+    background-color: var(--white-color);
+}
+
+/* Ajustements spécifiques pour l'arabe */
+html[lang="ar"] .footer-links h3::after,
+html[lang="ar"] .footer-contact h3::after {
+    right: 0;
+    left: auto;
+}
+
+html[lang="ar"] .footer-contact ul li i {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+html[lang="ar"] .read-more i {
+    transform: scaleX(-1);
+}
+
+html[lang="ar"] .read-more:hover i {
+    transform: translateX(-5px) scaleX(-1);
+}
+
+/* Ajustements spécifiques pour le français */
+html[lang="fr"] .footer-links h3::after,
+html[lang="fr"] .footer-contact h3::after {
+    left: 0;
+    right: auto;
+}
+
+html[lang="fr"] .footer-contact ul li i {
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+html[lang="fr"] .read-more i {
+    transform: scaleX(1);
+}
+
+html[lang="fr"] .read-more:hover i {
+    transform: translateX(5px);
+}
+
+/* Ajustements pour le menu selon la langue */
+html[lang="ar"] .main-menu li a::after {
+    right: 0;
+    left: auto;
+}
+
+html[lang="fr"] .main-menu li a::after {
+    left: 0;
+    right: auto;
+}
+
+/* Ajustements pour les dates dans les cartes d'actualités */
+html[lang="ar"] .date {
+    right: 15px;
+    left: auto;
+}
+
+html[lang="fr"] .date {
+    left: 15px;
+    right: auto;
+}
+
+/* Ajustements pour la catégorie d'activité */
+html[lang="ar"] .activity-category {
+    right: 15px;
+    left: auto;
+}
+
+html[lang="fr"] .activity-category {
+    left: 15px;
+    right: auto;
+}
+
+/* Ajustements pour la date d'activité */
+html[lang="ar"] .activity-date {
+    right: 15px;
+    left: auto;
+}
+
+html[lang="fr"] .activity-date {
+    left: 15px;
+    right: auto;
+}
+
+/* Ajustements pour la barre de progression */
+html[lang="ar"] .scroll-progress-bar {
+    right: 0;
+    left: auto;
+}
+
+html[lang="fr"] .scroll-progress-bar {
+    left: 0;
+    right: auto;
+}
+
+/* Ajustements pour le sélecteur de langue */
+html[lang="ar"] .lang-switch {
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+html[lang="fr"] .lang-switch {
+    margin-right: 15px;
+    margin-left: 0;
+}
+/* Styles pour le sélecteur de langue */
+.language-selector {
+    display: flex;
+    align-items: center;
+}
+
+.lang-btn {
+    padding: 5px 8px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.lang-btn.active {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.lang-btn:hover {
+    color: var(--primary-color);
+}
+
+.lang-separator {
+    margin: 0 5px;
+}
+
+.lang-switch {
+    margin-right: 15px;
+}
+
+/* Pour la version RTL */
+html[dir="rtl"] .lang-switch {
+    margin-right: 0;
+    margin-left: 15px;
+}

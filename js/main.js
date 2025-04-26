@@ -1,10 +1,8 @@
-/**
- * جمعية الأمل التنموية - الملف الرئيسي للجافاسكريبت
- * يحتوي على جميع الوظائف المستخدمة في الموقع
- */
 
 // تهيئة الصفحة عند تحميلها
 document.addEventListener('DOMContentLoaded', function() {
+        // تفعيل الوضع المظلم
+        initDarkMode();
     // تفعيل القائمة المتجاوبة
     initMobileMenu();
     
@@ -29,8 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         initFAQToggle();
     }
     
-    // تفعيل الوضع المظلم
-    initDarkMode();
+
 });
 
 /**
@@ -45,39 +42,6 @@ function initMobileMenu() {
             mainMenu.classList.toggle('active');
             menuToggle.classList.toggle('active');
         });
-    }
-}
-
-/**
- * تفعيل تأثيرات التمرير
- */
-function initScrollAnimations() {
-    const animatedElements = document.querySelectorAll('.scroll-animation');
-    
-    if (animatedElements.length > 0) {
-        // دالة للتحقق من ظهور العنصر في نطاق الرؤية
-        function isElementInViewport(el) {
-            const rect = el.getBoundingClientRect();
-            return (
-                rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
-                rect.bottom >= 0
-            );
-        }
-        
-        // دالة لتفعيل التأثير عند التمرير
-        function handleScroll() {
-            animatedElements.forEach(element => {
-                if (isElementInViewport(element) && !element.classList.contains('animated')) {
-                    element.classList.add('animated');
-                }
-            });
-        }
-        
-        // تفعيل التأثير عند تحميل الصفحة
-        handleScroll();
-        
-        // تفعيل التأثير عند التمرير
-        window.addEventListener('scroll', handleScroll);
     }
 }
 
@@ -97,8 +61,6 @@ function initScrollProgress() {
         progressBar.style.width = scrollPercentage + '%';
     });
 }
-
-
 
 
 /**
@@ -201,98 +163,6 @@ function initFAQToggle() {
     });
 }
 
-/**
- * تهيئة خريط Google Maps
- */
-function initMap() {
-    // التحقق من وجود عنصر الخريطة
-    const mapElement = document.getElementById('map');
-    
-    if (mapElement) {
-        // إحداثيات الموقع (يمكن تغييرها حسب موقع الجمعية)
-        const location = { lat: 31.6295, lng: -7.9811 }; // مراكش، المغرب
-        
-        // إنشاء خريطة جديدة
-        const map = new google.maps.Map(mapElement, {
-            center: location,
-            zoom: 15,
-            styles: [
-                {
-                    "featureType": "all",
-                    "elementType": "labels.text.fill",
-                    "stylers": [{"color": "#7c93a3"}, {"lightness": "-10"}]
-                },
-                {
-                    "featureType": "administrative.country",
-                    "elementType": "geometry",
-                    "stylers": [{"visibility": "on"}]
-                },
-                {
-                    "featureType": "administrative.province",
-                    "elementType": "geometry.stroke",
-                    "stylers": [{"color": "#ffffff"}, {"visibility": "on"}, {"weight": 1}]
-                },
-                {
-                    "featureType": "landscape",
-                    "elementType": "geometry",
-                    "stylers": [{"color": "#f5f5f5"}, {"lightness": 20}]
-                },
-                {
-                    "featureType": "poi",
-                    "elementType": "geometry",
-                    "stylers": [{"color": "#efefef"}, {"lightness": 21}]
-                },
-                {
-                    "featureType": "road.highway",
-                    "elementType": "geometry.fill",
-                    "stylers": [{"color": "#ffffff"}, {"lightness": 17}]
-                },
-                {
-                    "featureType": "road.highway",
-                    "elementType": "geometry.stroke",
-                    "stylers": [{"color": "#ffffff"}, {"lightness": 29}, {"weight": 0.2}]
-                },
-                {
-                    "featureType": "road.arterial",
-                    "elementType": "geometry",
-                    "stylers": [{"color": "#ffffff"}, {"lightness": 18}]
-                },
-                {
-                    "featureType": "road.local",
-                    "elementType": "geometry",
-                    "stylers": [{"color": "#ffffff"}, {"lightness": 16}]
-                },
-                {
-                    "featureType": "transit",
-                    "elementType": "geometry",
-                    "stylers": [{"color": "#f2f2f2"}, {"lightness": 19}]
-                },
-                {
-                    "featureType": "water",
-                    "elementType": "geometry",
-                    "stylers": [{"color": "#e9e9e9"}, {"lightness": 17}]
-                }
-            ]
-        });
-        
-        // إضافة علامة على الخريطة
-        const marker = new google.maps.Marker({
-            position: location,
-            map: map,
-            title: 'جمعية الأمل التنموية',
-            animation: google.maps.Animation.DROP
-        });
-        
-        const infoWindow = new google.maps.InfoWindow({
-            content: '<div class="map-info-window"><h3>جمعية الأمل التنموية</h3><p>شارع الأمل، حي السلام، المدينة</p></div>'
-        });
-        
-        marker.addListener('click', function() {
-            infoWindow.open(map, marker);
-        });
-    }
-}
-
 
 function validateContactForm() {
     const name = document.getElementById('contact-name');
@@ -387,69 +257,57 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 
-function initSmoothScroll() {
-    const links = document.querySelectorAll('a[href^="#"]');
-    
-    links.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            
-            if (targetId !== '#') {
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
+
+function initScrollAnimations() {
+    const animatedElements = document.querySelectorAll('.scroll-animation');
+
+    if ('IntersectionObserver' in window && animatedElements.length > 0) {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                    observer.unobserve(entry.target); // نوقف المراقبة بعد تفعيل التأثير
                 }
-            }
+            });
+        }, {
+            threshold: 0.2 // نسبة ظهور العنصر المطلوبة (20%)
         });
-    });
+
+        animatedElements.forEach(element => {
+            observer.observe(element);
+        });
+    }
 }
 
 
 function initCounters() {
     const counters = document.querySelectorAll('.counter');
-    
-    if (counters.length > 0) {
-        function isElementInViewport(el) {
-            const rect = el.getBoundingClientRect();
-            return (
-                rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.bottom >= 0
-            );
-        }
-        
-        function startCounting() {
-            counters.forEach(counter => {
-                if (isElementInViewport(counter) && !counter.classList.contains('counted')) {
-                    counter.classList.add('counted');
-                    
-                    const target = parseInt(counter.getAttribute('data-count'));
-                    const duration = 2000; 
-                    const step = Math.ceil(target / (duration / 20)); 
-                    
+
+    if ('IntersectionObserver' in window && counters.length > 0) {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                    entry.target.classList.add('counted');
+                    const target = parseInt(entry.target.getAttribute('data-count'));
+                    const duration = 2000;
+                    const step = Math.ceil(target / (duration / 20));
                     let current = 0;
+
                     const timer = setInterval(() => {
                         current += step;
-                        
                         if (current >= target) {
                             current = target;
                             clearInterval(timer);
                         }
-                        
-                        counter.textContent = current.toLocaleString();
+                        entry.target.textContent = current.toLocaleString();
                     }, 20);
+
+                    observer.unobserve(entry.target);
                 }
             });
-        }
-        
-        startCounting();
-        
-        window.addEventListener('scroll', startCounting);
+        });
+
+        counters.forEach(counter => observer.observe(counter));
     }
 }
 
@@ -637,3 +495,5 @@ function initDarkMode() {
         });
     }
 }
+
+

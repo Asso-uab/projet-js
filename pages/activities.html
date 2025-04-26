@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/responsive.css">
 </head>
 <body>
     <!-- القائمة العلوية -->
@@ -15,7 +14,7 @@
         <div class="container">
             <div class="logo">
                 <img src="../img/images.jpeg" alt="شعار الجمعية">
-                <h1>جمعية الأمل التنموية</h1>
+                <h1>جمعية الأمل </h1>
             </div>
             <nav>
                 <ul class="main-menu">
@@ -25,9 +24,20 @@
                     <li><a href="donations.html">التبرعات والمساعدات</a></li>
                     <li><a href="contact.html">تواصل معنا</a></li>
                     <li><a href="about.html">من نحن</a></li>
-                    <li> <a id="themeToggle">
+                    <li class="darck"> <a id="themeToggle">
                         <i id="themeIcon" class="fas fa-sun"></i>
                     </a></li>
+
+
+                    <div class="language-selector language-switcher">
+                        <button id="ar-btn" class="lang-btn active" data-lang="ar">Ar</button>
+                        <span class="lang-separator">|</span>
+                        <button id="fr-btn" class="lang-btn active" data-lang="fr">Fr</button>
+                    </div>
+
+                    <script src="../js/translation.js"></script>
+
+
                 </ul>
                 <div class="menu-toggle">
                     <i class="fas fa-bars"></i>
@@ -35,6 +45,13 @@
             </nav>
         </div>
     </header>
+
+
+
+
+    
+
+    
 
     <!-- عنوان الصفحة -->
     <section class="page-header">
@@ -251,7 +268,7 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <img src="../img/images.jpeg" alt="شعار الجمعية">
-                    <p>جمعية الأمل التنموية تعمل على تحسين حياة المجتمعات المحلية من خلال مشاريع تنموية مستدامة.</p>
+                    <p>جمعية الأمل  تعمل على تحسين حياة المجتمعات المحلية من خلال مشاريع تنموية مستدامة.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -280,7 +297,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>جميع الحقوق محفوظة &copy; 2025 - جمعية الأمل التنموية</p>
+                <p>جميع الحقوق محفوظة &copy; 2025 - جمعية الأمل </p>
             </div>
         </div>
     </footer>

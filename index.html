@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">    
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
     <!-- القائمة العلوية -->
@@ -16,7 +17,7 @@
         <div class="container">
             <div class="logo">
                 <img src="./img/images.jpeg" alt="شعار الجمعية">
-                <h1>جمعية الأمل التنموية</h1>
+                <h1>جمعية الأمل </h1>
             </div>
             <nav>
                 <ul class="main-menu">
@@ -26,12 +27,23 @@
                     <li><a href="pages/donations.html">التبرعات والمساعدات</a></li>
                     <li><a href="pages/contact.html">تواصل معنا</a></li>
                     <li><a href="pages/about.html">من نحن</a></li>
-                     <!-- Replace the incorrect <r> tag with <a> tag -->
-                    <li> <a id="themeToggle">
+                     
+                    <li class="darck"> <a id="themeToggle">
                         <i id="themeIcon" class="fas fa-sun"></i>
                     </a></li>
 
+
+
+                        <div class="language-selector language-switcher">
+                            <button id="ar-btn" class="lang-btn active" data-lang="ar">Ar</button>
+                            <span class="lang-separator">|</span>
+                            <button id="fr-btn" class="lang-btn active" data-lang="fr">Fr</button>
+                        </div>
+
+                    
                    
+                    <script src="js/translation.js"></script> 
+
 
                 </ul>
                 <div class="menu-toggle">
@@ -47,7 +59,7 @@
         <div class="container">
             <div class="hero-content">
                 <h2>معاً نبني مستقبلاً أفضل</h2>
-                <p>جمعية الأمل التنموية تسعى لتحسين حياة المجتمع من خلال مشاريع تنموية مستدامة</p>
+                <p>جمعية الأمل  تسعى لتحسين حياة المجتمع من خلال مشاريع تنموية مستدامة</p>
                 <div class="cta-buttons">
                     <a href="pages/donations.html" class="btn primary-btn">تبرع الآن</a>
                     <a href="pages/about.html" class="btn primary-btn">تعرف علينا</a> <!--btn secondary-btn -->
@@ -65,7 +77,7 @@
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>جمعية الأمل التنموية هي منظمة غير ربحية تأسست عام 2010، تهدف إلى تحسين الظروف المعيشية للمجتمعات المحلية من خلال مشاريع تنموية مستدامة في مجالات التعليم، الصحة، البيئة والتمكين الاقتصادي.</p>
+                    <p>جمعية الأمل  هي منظمة غير ربحية تأسست عام 2010، تهدف إلى تحسين الظروف المعيشية للمجتمعات المحلية من خلال مشاريع تنموية مستدامة في مجالات التعليم، الصحة، البيئة والتمكين الاقتصادي.</p>
                     <p>نعمل بشراكة مع المجتمعات المحلية والمؤسسات الحكومية والخاصة لتحقيق تنمية شاملة ومستدامة.</p>
                     <a href="pages/about.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
                 </div>
@@ -231,7 +243,7 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <img src="./img/images.jpeg" alt="شعار الجمعية">
-                    <p>جمعية الأمل التنموية تعمل على تحسين حياة المجتمعات المحلية من خلال مشاريع تنموية مستدامة.</p>
+                    <p>جمعية الأمل  تعمل على تحسين حياة المجتمعات المحلية من خلال مشاريع تنموية مستدامة.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -260,12 +272,36 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>جميع الحقوق محفوظة &copy; 2025 - جمعية الأمل التنموية</p>
+                <p>جميع الحقوق محفوظة &copy; 2025 - جمعية الأمل </p>
             </div>
         </div>
     </footer>
 
+    <!-- chat Bot -->
+
+    <div id="chat-container" class="chat-closed">
+        <div class="chat-header">
+            <div class="chat-title">المساعد الافتراضي</div>
+            <div class="chat-controls">
+                <button id="minimize-btn"><i class="fas fa-minus"></i></button>
+                <button id="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+        <div class="chat-body">
+            <div id="chat-messages"></div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="اكتب رسالتك هنا...">
+            <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <div id="chat-button">
+        <i class="fas fa-comments"></i>
+    </div>
+
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
     <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
 </body>
 </html>
