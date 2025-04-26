@@ -1,0 +1,157 @@
+
+
+
+{
+  "ar": {
+    "welcome": "مرحبًا بك في موقع جمعيتنا 👋 كيف يمكنني مساعدتك؟",
+    "options": [
+      "أريد التبرع",
+      "أبحث عن مساعدة",
+      "أنشطة الجمعية",
+      "الأسئلة الشائعة",
+      "اتصل بنا"
+    ],
+    "donate": {
+      "text": "شكرًا لرغبتك في التبرع! يمكنك التبرع من خلال:",
+      "options": [
+        "تبرع عبر الإنترنت",
+        "تبرع بالتحويل البنكي",
+        "تبرع عيني"
+      ]
+    },
+    "online_donation": "يمكنك التبرع عبر الإنترنت من خلال زيارة صفحة التبرعات على موقعنا: <a href='#donation' target='_blank'>صفحة التبرع</a>",
+    "bank_donation": "يمكنك التبرع عن طريق التحويل البنكي إلى الحساب التالي: IBAN: XX55 6677 8899 1010 1111 1212",
+    "in_kind_donation": "نرحب بالتبرعات العينية مثل الملابس والأغذية والأثاث. يرجى الاتصال بنا على الرقم: 704959711 212+ لترتيب التسليم.",
+    "help": {
+      "text": "نحن هنا لمساعدتك. ما نوع المساعدة التي تبحث عنها؟",
+      "options": [
+        "مساعدة مالية",
+        "مساعدة طبية",
+        "مساعدة قانونية",
+        "مساعدة تعليمية"
+      ]
+    },
+    "financial_help": "لطلب المساعدة المالية، يرجى تعبئة النموذج في <a href='#financial-aid' target='_blank'>هذه الصفحة</a> أو زيارة مقر الجمعية شخصيًا.",
+    "medical_help": "توفر جمعيتنا مساعدات طبية للمحتاجين. يرجى الاتصال بنا على الرقم: 704959711 212+ أو زيارة عيادتنا في العنوان: شارع الاستقلال، رقم 123.",
+    "legal_help": "نقدم استشارات قانونية مجانية كل يوم ثلاثاء من الساعة 10 صباحًا حتى 2 ظهرًا. يرجى الحجز مسبقًا عبر الهاتف: 704959711 212+.",
+    "educational_help": "نقدم دروس تقوية ودعم تعليمي للطلاب. لمزيد من المعلومات، يرجى زيارة <a href='#education' target='_blank'>صفحة البرامج التعليمية</a>.",
+    "activities": {
+      "text": "تنظم جمعيتنا العديد من الأنشطة. ما الذي تود معرفة المزيد عنه؟",
+      "options": [
+        "الفعاليات القادمة",
+        "ورش العمل",
+        "حملات التوعية",
+        "المخيمات الصيفية"
+      ]
+    },
+    "upcoming_events": "الفعاليات القادمة: <br>- يوم مفتوح: 15 يوليو <br>- حملة تبرع بالدم: 20 يوليو <br>- مؤتمر سنوي: 5 أغسطس <br><a href='#events' target='_blank'>عرض جميع الفعاليات</a>",
+    "workshops": "نقدم ورش عمل في مجالات متنوعة مثل التنمية الشخصية، المهارات الرقمية، والحرف اليدوية. تفقد <a href='../activites.html' target='_blank'>جدول ورش العمل</a> لمعرفة المواعيد.",
+    "awareness_campaigns": "نقوم بحملات توعية في مجالات الصحة، البيئة، وحقوق الإنسان. لمعرفة الحملات الحالية، يرجى زيارة <a href='../activites.html' target='_blank'>صفحة الحملات</a>.",
+    "summer_camps": "ننظم مخيمات صيفية للأطفال والشباب. التسجيل للمخيم القادم مفتوح حاليًا! <a href='#camps' target='_blank'>سجل الآن</a>",
+    "faq": {
+      "text": "إليك بعض الأسئلة الشائعة. ما الذي تريد معرفته؟",
+      "options": [
+        "كيف يمكنني الانضمام للجمعية؟",
+        "ما هي مواعيد العمل؟",
+        "هل يمكنني التطوع؟",
+        "كيف يتم استخدام التبرعات؟"
+      ]
+    },
+    "join_association": "للانضمام إلى جمعيتنا، يرجى تعبئة <a href='#membership' target='_blank'>نموذج العضوية</a> وتقديمه في مقر الجمعية مع صورتين شخصيتين ونسخة من بطاقة الهوية.",
+    "working_hours": "مواعيد العمل في مقر الجمعية: <br>- من الاثنين إلى الجمعة: 9 صباحًا - 5 مساءً <br>- السبت: 10 صباحًا - 2 ظهرًا <br>- الأحد: مغلق",
+    "volunteer": "نرحب دائمًا بالمتطوعين! يمكنك التطوع في مجالات مختلفة حسب مهاراتك واهتماماتك. يرجى ملء <a href='#volunteer' target='_blank'>نموذج التطوع</a> وسنتواصل معك قريبًا.",
+    "donations_usage": "يتم استخدام التبرعات في تمويل برامجنا الخيرية، بما في ذلك المساعدات المالية والطبية، البرامج التعليمية، وتنظيم الفعاليات المجتمعية. يمكنك الاطلاع على تقاريرنا المالية السنوية <a href='#reports' target='_blank'>هنا</a>.",
+    "contact": {
+      "text": "يمكنك التواصل معنا عبر:",
+      "options": [
+        "البريد الإلكتروني",
+        "الهاتف",
+        "زيارة المقر",
+        "وسائل التواصل الاجتماعي"
+      ]
+    },
+    "email_contact": "يمكنك مراسلتنا على البريد الإلكتروني: info@association.org",
+    "phone_contact": "يمكنك الاتصال بنا على الأرقام التالية: <br>- الإدارة: 704959711 212+ <br>- خدمة المستفيدين: 704959711 212+",
+    "visit_headquarters": "مقر الجمعية: كلية متعددة التخصصات تارودانت، رقم 123، المدينة. <br>مواعيد الاستقبال: من الاثنين إلى الجمعة، 9 صباحًا - 5 مساءً.",
+    "social_media": "تابعنا على وسائل التواصل الاجتماعي: <br>- <a href='https://github.com/AitAddiHamza1' target='_blank'>فيسبوك</a> <br>- <a href='https://github.com/AitAddiHamza1' target='_blank'>تويتر</a> <br>- <a href='https://github.com/AitAddiHamza1' target='_blank'>انستغرام</a>",
+    "email_collection": "هل ترغب في الاشتراك في نشرتنا الإخبارية؟ يرجى إدخال بريدك الإلكتروني:",
+    "email_thanks": "شكرًا لك! تم تسجيل بريدك الإلكتروني في قائمة النشرة الإخبارية.",
+    "fallback": "عذرًا، لم أفهم طلبك. هل يمكنك إعادة صياغته أو اختيار أحد الخيارات المتاحة؟"
+  },
+  "fr": {
+    "welcome": "Bienvenue sur notre site associatif 👋 Comment puis-je vous aider ?",
+    "options": [
+      "Je veux faire un don",
+      "Je cherche une aide",
+      "Activités de l'association",
+      "FAQ",
+      "Contactez-nous"
+    ],
+    "donate": {
+      "text": "Merci pour votre intérêt à faire un don ! Vous pouvez donner par :",
+      "options": [
+        "Don en ligne",
+        "Virement bancaire",
+        "Don en nature"
+      ]
+    },
+    "online_donation": "Vous pouvez faire un don en ligne en visitant notre page de dons : <a href='#donation' target='_blank'>Page de dons</a>",
+    "bank_donation": "Vous pouvez faire un don par virement bancaire sur le compte suivant : IBAN: XX00 0000 0000 0000 0000 0000",
+    "in_kind_donation": "Nous acceptons les dons en nature comme des vêtements, de la nourriture et des meubles. Veuillez nous contacter au 704959711 212+ pour organiser la livraison.",
+    "help": {
+      "text": "Nous sommes là pour vous aider. Quel type d'aide recherchez-vous ?",
+      "options": [
+        "Aide financière",
+        "Aide médicale",
+        "Aide juridique",
+        "Aide éducative"
+      ]
+    },
+    "financial_help": "Pour demander une aide financière, veuillez remplir le formulaire sur <a href='#financial-aid' target='_blank'>cette page</a> ou visiter notre siège en personne.",
+    "medical_help": "Notre association fournit une assistance médicale aux personnes dans le besoin. Veuillez nous contacter au +212-000-000000 ou visiter notre clinique à l'adresse : 123, Rue de l'Indépendance.",
+    "legal_help": "Nous offrons des consultations juridiques gratuites tous les mardis de 10h à 14h. Veuillez réserver à l'avance par téléphone : 704959711 212+.",
+    "educational_help": "Nous proposons des cours de soutien et une aide éducative aux étudiants. Pour plus d'informations, visitez <a href='#education' target='_blank'>la page des programmes éducatifs</a>.",
+    "activities": {
+      "text": "Notre association organise diverses activités. Que souhaitez-vous savoir ?",
+      "options": [
+        "Événements à venir",
+        "Ateliers",
+        "Campagnes de sensibilisation",
+        "Camps d'été"
+      ]
+    },
+    "upcoming_events": "Événements à venir : <br>- Journée portes ouvertes : 15 juillet <br>- Campagne de don de sang : 20 juillet <br>- Conférence annuelle : 5 août <br><a href='#events' target='_blank'>Voir tous les événements</a>",
+    "workshops": "Nous proposons des ateliers dans divers domaines tels que le développement personnel, les compétences numériques et l'artisanat. Consultez <a href='#workshops' target='_blank'>le calendrier des ateliers</a> pour connaître les horaires.",
+    "awareness_campaigns": "Nous menons des campagnes de sensibilisation dans les domaines de la santé, de l'environnement et des droits humains. Pour connaître les campagnes actuelles, visitez <a href='#campaigns' target='_blank'>la page des campagnes</a>.",
+    "summer_camps": "Nous organisons des camps d'été pour les enfants et les jeunes. Les inscriptions pour le prochain camp sont ouvertes ! <a href='#camps' target='_blank'>Inscrivez-vous maintenant</a>",
+    "faq": {
+      "text": "Voici quelques questions fréquemment posées. Que voulez-vous savoir ?",
+      "options": [
+        "Comment rejoindre l'association ?",
+        "Quels sont les horaires d'ouverture ?",
+        "Puis-je faire du bénévolat ?",
+        "Comment les dons sont-ils utilisés ?"
+      ]
+    },
+    "join_association": "Pour rejoindre notre association, veuillez remplir <a href='#membership' target='_blank'>le formulaire d'adhésion</a> et le soumettre à notre siège avec deux photos d'identité et une copie de votre carte d'identité.",
+    "working_hours": "Horaires d'ouverture de notre siège : <br>- Du lundi au vendredi : 9h - 17h <br>- Samedi : 10h - 14h <br>- Dimanche : fermé",
+    "volunteer": "Nous accueillons toujours des bénévoles ! Vous pouvez vous porter volontaire dans différents domaines selon vos compétences et intérêts. Veuillez remplir <a href='#volunteer' target='_blank'>le formulaire de bénévolat</a> et nous vous contacterons bientôt.",
+    "donations_usage": "Les dons sont utilisés pour financer nos programmes caritatifs, y compris l'aide financière et médicale, les programmes éducatifs et l'organisation d'événements communautaires. Vous pouvez consulter nos rapports financiers annuels <a href='#reports' target='_blank'>ici</a>.",
+    "contact": {
+      "text": "Vous pouvez nous contacter via :",
+      "options": [
+        "Email",
+        "Téléphone",
+        "Visite au siège",
+        "Réseaux sociaux"
+      ]
+    },
+    "email_contact": "Vous pouvez nous envoyer un email à : info@association.org",
+    "phone_contact": "Vous pouvez nous appeler aux numéros suivants : <br>- Administration : +212-000-000000 <br>- Service bénéficiaires : 704959711 212+",
+    "visit_headquarters": "Siège de l'association : 123, Rue de l'Indépendance, Ville. <br>Heures de réception : du lundi au vendredi, 9h - 17h.",
+    "social_media": "Suivez-nous sur les réseaux sociaux : <br>- <a href='https://github.com/AitAddiHamza1' target='_blank'>Facebook</a> <br>- <a href='https://github.com/AitAddiHamza1' target='_blank'>Twitter</a> <br>- <a href='https://github.com/AitAddiHamza1' target='_blank'>Instagram</a>",
+    "email_collection": "Souhaitez-vous vous abonner à notre newsletter ? Veuillez entrer votre email :",
+    "email_thanks": "Merci ! Votre email a été enregistré pour notre newsletter.",
+    "fallback": "Désolé, je n'ai pas compris votre demande. Pouvez-vous la reformuler ou choisir l'une des options disponibles ?"
+  }
+}

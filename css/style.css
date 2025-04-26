@@ -7,10 +7,40 @@
     --gray-color: #757575;
     --light-gray: #f5f5f5;
     --white-color: #ffffff;
+    --white-colors: #ffffff;
     --black-color: #212121;
+    --black-colors: #212121;
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
 }
+
+/* ===== الوضع الداكن ===== */
+.dark-mode {
+    --primary-color: #4caf50;
+    --secondary-color: #81c784;
+    --light-color: #263238;
+    --dark-color: #388e3c;
+    --gray-color: #b0bec5;
+    --light-gray: #37474f;
+    --white-color: #202c3a;
+    --white-colors: #ffffff;
+    --black-color: #263238;
+    --black-colors: #f8f4f4;
+    --shadow: 0 2px 10px #f1eeee80;
+}
+#themeIcon {
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#themeIcon:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* ... existing code ... */
+
+
 
 * {
     margin: 0;
@@ -25,9 +55,9 @@ html {
 body {
     font-family: 'Tajawal', 'Cairo', sans-serif;
     line-height: 1.6;
-    color: var(--black-color);
+    color: var(--black-colors);
     background-color: var(--white-color);
-    direction: rtl;
+   
 }
 
 .container {
@@ -45,6 +75,7 @@ a {
 
 ul {
     list-style: none;
+    font-size: 20px;
 }
 
 img {
@@ -153,6 +184,8 @@ header .container {
 .logo img {
     width: 50px;
     height: 50px;
+    border: solid 1px black;
+    border-radius: 50px;
 }
 
 .logo h1 {
@@ -168,7 +201,7 @@ nav {
 
 .main-menu {
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 .main-menu li a {
@@ -177,7 +210,7 @@ nav {
     position: relative;
 }
 
-.main-menu li a::after {
+.main-menu li:not(.darck) a::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -207,7 +240,7 @@ nav {
     background-size: cover;
     background-position: center;
     position: relative;
-    color: var(--white-color);
+    color: var(--white-colors);
     display: flex;
     align-items: center;
 }
@@ -250,6 +283,7 @@ nav {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -314,6 +348,100 @@ nav {
 .stat-item p {
     color: var(--gray-color);
     font-size: 1.1rem;
+}
+
+/* تنسيق القسم الرئيسي */
+.annual-reports {
+    padding: 50px 0;
+    text-align: center;
+    direction: rtl;
+}
+
+/* تنسيق عنوان القسم */
+.section-title {
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.separator {
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 15px auto;
+}
+
+/* تنسيق شبكة التقارير بشكل أفقي */
+.reports-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* تنسيق بطاقة التقرير */
+.report-card {
+    background-color: var(--white-color);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.report-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* تنسيق أيقونة التقرير */
+.report-icon {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* تنسيق عنوان التقرير */
+.report-card h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* تنسيق زر التحميل */
+.btn.secondary-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn.secondary-btn:hover {
+    background-color: var(--primary-color);
+}
+
+/* تجاوب مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .reports-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .report-card {
+        width: 100%;
+    }
 }
 
 /* ===== روابط سريعة ===== */
@@ -572,7 +700,7 @@ nav {
 /* ===== تذييل الصفحة ===== */
 footer {
     background-color: var(--black-color);
-    color: var(--white-color);
+    color: var(--white-colors);
     padding: 80px 0 0;
 }
 
@@ -586,6 +714,8 @@ footer {
     width: 80px;
     height: auto;
     margin-bottom: 15px;
+    border: solid 1px;
+    border-radius: 50px;
 }
 
 .footer-about p {
@@ -633,6 +763,44 @@ footer {
     background-color: var(--primary-color);
 }
 
+.vm-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 30px 20px;
+}
+
+.vm-card ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+    margin: 20px 0 0;
+}
+
+.vm-card ul li {
+    background-color: var(--white-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
+
+.vm-card ul li:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
 .footer-links ul li,
 .footer-contact ul li {
     margin-bottom: 15px;
@@ -645,12 +813,19 @@ footer {
     color: var(--primary-color);
 }
 
+
 .footer-bottom {
     text-align: center;
     padding: 20px 0;
     margin-top: 60px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+
+
+
+
+
 
 /* ===== صفحة الأعضاء ===== */
 .members-section {
@@ -1305,19 +1480,19 @@ footer {
     .links-container {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .news-container {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .members-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    
+
     .activities-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .values-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1327,60 +1502,60 @@ footer {
     .hero-content h2 {
         font-size: 2.5rem;
     }
-    
+
     .about-content {
         flex-direction: column;
     }
-    
+
     .footer-content {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+
     .members-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .donation-methods {
         grid-template-columns: 1fr;
     }
-    
+
     .contact-info {
         grid-template-columns: 1fr;
     }
-    
+
     .contact-form-map {
         grid-template-columns: 1fr;
     }
-    
+
     .vision-mission {
         grid-template-columns: 1fr;
     }
-    
+
     .timeline::after {
         left: 31px;
         right: auto;
     }
-    
+
     .timeline-item {
         width: 100%;
         padding-left: 70px;
         padding-right: 25px;
     }
-    
+
     .timeline-item::after {
         left: 15px;
         right: auto;
     }
-    
+
     .timeline-item.right {
         left: 0;
     }
-    
+
     .timeline-item.right::after {
         left: 15px;
     }
-    
+
     .timeline-content .date {
         right: auto;
         left: 0;
@@ -1391,7 +1566,7 @@ footer {
     .menu-toggle {
         display: block;
     }
-    
+
     .main-menu {
         position: fixed;
         top: 80px;
@@ -1405,44 +1580,223 @@ footer {
         transition: var(--transition);
         z-index: 999;
     }
-    
+
     .main-menu.active {
         right: 0;
     }
-    
+
     .hero-content h2 {
         font-size: 2rem;
     }
-    
+
     .cta-buttons {
         flex-direction: column;
     }
-    
+
     .links-container {
         grid-template-columns: 1fr;
     }
-    
+
     .news-container {
         grid-template-columns: 1fr;
     }
-    
+
     .members-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .activities-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .form-row {
         grid-template-columns: 1fr;
     }
-    
+
     .activities-filter {
         flex-wrap: wrap;
     }
-    
+
     .values-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* scrolle: */
+
+.scroll-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background-color: #4caf50;
+    width: 0%;
+    z-index: 9999;
+    transition: width 0.2s ease-out;
+}
+
+/* dark:: */
+
+
+
+
+
+
+/* ===== Configuration pour la direction du texte selon la langue ===== */
+html[lang="ar"] {
+    direction: rtl;
+}
+
+html[lang="fr"] {
+    direction: ltr;
+}
+
+/* Configuration de base du corps du document */
+body {
+    font-family: 'Tajawal', 'Cairo', sans-serif;
+    line-height: 1.6;
+    color: var(--black-colors);
+    background-color: var(--white-color);
+}
+
+/* Ajustements spécifiques pour l'arabe */
+html[lang="ar"] .footer-links h3::after,
+html[lang="ar"] .footer-contact h3::after {
+    right: 0;
+    left: auto;
+}
+
+html[lang="ar"] .footer-contact ul li i {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+html[lang="ar"] .read-more i {
+    transform: scaleX(-1);
+}
+
+html[lang="ar"] .read-more:hover i {
+    transform: translateX(-5px) scaleX(-1);
+}
+
+/* Ajustements spécifiques pour le français */
+html[lang="fr"] .footer-links h3::after,
+html[lang="fr"] .footer-contact h3::after {
+    left: 0;
+    right: auto;
+}
+
+html[lang="fr"] .footer-contact ul li i {
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+html[lang="fr"] .read-more i {
+    transform: scaleX(1);
+}
+
+html[lang="fr"] .read-more:hover i {
+    transform: translateX(5px);
+}
+
+/* Ajustements pour le menu selon la langue */
+html[lang="ar"] .main-menu li a::after {
+    right: 0;
+    left: auto;
+}
+
+html[lang="fr"] .main-menu li a::after {
+    left: 0;
+    right: auto;
+}
+
+/* Ajustements pour les dates dans les cartes d'actualités */
+html[lang="ar"] .date {
+    right: 15px;
+    left: auto;
+}
+
+html[lang="fr"] .date {
+    left: 15px;
+    right: auto;
+}
+
+/* Ajustements pour la catégorie d'activité */
+html[lang="ar"] .activity-category {
+    right: 15px;
+    left: auto;
+}
+
+html[lang="fr"] .activity-category {
+    left: 15px;
+    right: auto;
+}
+
+/* Ajustements pour la date d'activité */
+html[lang="ar"] .activity-date {
+    right: 15px;
+    left: auto;
+}
+
+html[lang="fr"] .activity-date {
+    left: 15px;
+    right: auto;
+}
+
+/* Ajustements pour la barre de progression */
+html[lang="ar"] .scroll-progress-bar {
+    right: 0;
+    left: auto;
+}
+
+html[lang="fr"] .scroll-progress-bar {
+    left: 0;
+    right: auto;
+}
+
+/* Ajustements pour le sélecteur de langue */
+html[lang="ar"] .lang-switch {
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+html[lang="fr"] .lang-switch {
+    margin-right: 15px;
+    margin-left: 0;
+}
+/* Styles pour le sélecteur de langue */
+.language-selector {
+    display: flex;
+    align-items: center;
+}
+
+.lang-btn {
+    padding: 5px 8px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.lang-btn.active {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.lang-btn:hover {
+    color: var(--primary-color);
+}
+
+.lang-separator {
+    margin: 0 5px;
+}
+
+.lang-switch {
+    margin-right: 15px;
+}
+
+/* Pour la version RTL */
+html[dir="rtl"] .lang-switch {
+    margin-right: 0;
+    margin-left: 15px;
 }

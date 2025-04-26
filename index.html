@@ -6,16 +6,18 @@
     <title>الجمعية التنموية | الصفحة الرئيسية</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">    
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
     <!-- القائمة العلوية -->
     <header>
         <div class="container">
             <div class="logo">
-                <img src="images/logo.png" alt="شعار الجمعية">
-                <h1>جمعية الأمل التنموية</h1>
+                <img src="./img/images.jpeg" alt="شعار الجمعية">
+                <h1>جمعية الأمل </h1>
             </div>
             <nav>
                 <ul class="main-menu">
@@ -25,6 +27,24 @@
                     <li><a href="pages/donations.html">التبرعات والمساعدات</a></li>
                     <li><a href="pages/contact.html">تواصل معنا</a></li>
                     <li><a href="pages/about.html">من نحن</a></li>
+                     
+                    <li class="darck"> <a id="themeToggle">
+                        <i id="themeIcon" class="fas fa-sun"></i>
+                    </a></li>
+
+
+
+                        <div class="language-selector language-switcher">
+                            <button id="ar-btn" class="lang-btn active" data-lang="ar">Ar</button>
+                            <span class="lang-separator">|</span>
+                            <button id="fr-btn" class="lang-btn active" data-lang="fr">Fr</button>
+                        </div>
+
+                    
+                   
+                    <script src="js/translation.js"></script> 
+
+
                 </ul>
                 <div class="menu-toggle">
                     <i class="fas fa-bars"></i>
@@ -39,10 +59,10 @@
         <div class="container">
             <div class="hero-content">
                 <h2>معاً نبني مستقبلاً أفضل</h2>
-                <p>جمعية الأمل التنموية تسعى لتحسين حياة المجتمع من خلال مشاريع تنموية مستدامة</p>
+                <p>جمعية الأمل  تسعى لتحسين حياة المجتمع من خلال مشاريع تنموية مستدامة</p>
                 <div class="cta-buttons">
                     <a href="pages/donations.html" class="btn primary-btn">تبرع الآن</a>
-                    <a href="pages/about.html" class="btn secondary-btn">تعرف علينا</a>
+                    <a href="pages/about.html" class="btn primary-btn">تعرف علينا</a> <!--btn secondary-btn -->
                 </div>
             </div>
         </div>
@@ -57,7 +77,7 @@
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>جمعية الأمل التنموية هي منظمة غير ربحية تأسست عام 2010، تهدف إلى تحسين الظروف المعيشية للمجتمعات المحلية من خلال مشاريع تنموية مستدامة في مجالات التعليم، الصحة، البيئة والتمكين الاقتصادي.</p>
+                    <p>جمعية الأمل  هي منظمة غير ربحية تأسست عام 2010، تهدف إلى تحسين الظروف المعيشية للمجتمعات المحلية من خلال مشاريع تنموية مستدامة في مجالات التعليم، الصحة، البيئة والتمكين الاقتصادي.</p>
                     <p>نعمل بشراكة مع المجتمعات المحلية والمؤسسات الحكومية والخاصة لتحقيق تنمية شاملة ومستدامة.</p>
                     <a href="pages/about.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
                 </div>
@@ -141,7 +161,7 @@
             <div class="news-container">
                 <div class="news-card">
                     <div class="news-img">
-                        <img src="../img/image.png" alt="صورة الخبر">
+                        <img src="./img/image.png" alt="صورة الخبر">
                         <div class="date">
                             <span>15</span>
                             <span>يونيو</span>
@@ -155,7 +175,7 @@
                 </div>
                 <div class="news-card">
                     <div class="news-img">
-                        <img src="images/news2.jpg" alt="صورة الخبر">
+                        <img src="./img/arbe.webp" alt="صورة الخبر">
                         <div class="date">
                             <span>10</span>
                             <span>يونيو</span>
@@ -169,7 +189,7 @@
                 </div>
                 <div class="news-card">
                     <div class="news-img">
-                        <img src="../img/قافلة-طبية-جهوية.jpg" alt="صورة الخبر">
+                        <img src="./img/قافلة-طبية-جهوية.jpg" alt="صورة الخبر">
                         <div class="date">
                             <span>5</span>
                             <span>يونيو</span>
@@ -196,7 +216,9 @@
                 <span class="separator"></span>
             </div>
             <div class="map-container">
-                <div id="map"></div>
+                <div id="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d860.1180635084634!2d-9.589460368221346!3d30.422711757529676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3b65f59a36f19%3A0x588052053074d242!2sCCF6%2B47H%2C%20Agadir%2080000!5e0!3m2!1sen!2sma!4v1744901046494!5m2!1sen!2sma" width="1300" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
     </section>
@@ -220,8 +242,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
-                    <img src="images/logo.png" alt="شعار الجمعية">
-                    <p>جمعية الأمل التنموية تعمل على تحسين حياة المجتمعات المحلية من خلال مشاريع تنموية مستدامة.</p>
+                    <img src="./img/images.jpeg" alt="شعار الجمعية">
+                    <p>جمعية الأمل  تعمل على تحسين حياة المجتمعات المحلية من خلال مشاريع تنموية مستدامة.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -243,19 +265,43 @@
                 <div class="footer-contact">
                     <h3>تواصل معنا</h3>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> شارع الأمل، حي السلام، المدينة</li>
-                        <li><i class="fas fa-phone"></i> +212 5XX-XXXXXX</li>
+                        <li><i class="fas fa-map-marker-alt"></i>كلية متعددة التخصصات تارودانت</li>
+                        <li><i class="fas fa-phone"></i> 704959711 212+</li>
                         <li><i class="fas fa-envelope"></i> info@alamal-association.org</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>جميع الحقوق محفوظة &copy; 2023 - جمعية الأمل التنموية</p>
+                <p>جميع الحقوق محفوظة &copy; 2025 - جمعية الأمل </p>
             </div>
         </div>
     </footer>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <!-- chat Bot -->
+
+    <div id="chat-container" class="chat-closed">
+        <div class="chat-header">
+            <div class="chat-title">المساعد الافتراضي</div>
+            <div class="chat-controls">
+                <button id="minimize-btn"><i class="fas fa-minus"></i></button>
+                <button id="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+        <div class="chat-body">
+            <div id="chat-messages"></div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="اكتب رسالتك هنا...">
+            <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <div id="chat-button">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
     <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
 </body>
 </html>

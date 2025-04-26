@@ -7,15 +7,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/responsive.css">
 </head>
 <body>
     <!-- القائمة العلوية -->
     <header>
         <div class="container">
             <div class="logo">
-                <img src="../images/logo.png" alt="شعار الجمعية">
-                <h1>جمعية الأمل التنموية</h1>
+                <img src="../img/images.jpeg" alt="شعار الجمعية">
+                <h1>جمعية الأمل </h1>
             </div>
             <nav>
                 <ul class="main-menu">
@@ -25,6 +24,19 @@
                     <li class="active"><a href="donations.html">التبرعات والمساعدات</a></li>
                     <li><a href="contact.html">تواصل معنا</a></li>
                     <li><a href="about.html">من نحن</a></li>
+                    <li class="darck"> <a id="themeToggle">
+                        <i id="themeIcon" class="fas fa-sun"></i>
+                    </a></li>
+
+                    <div class="language-selector language-switcher">
+                        <button id="ar-btn" class="lang-btn active" data-lang="ar">Ar</button>
+                        <span class="lang-separator">|</span>
+                        <button id="fr-btn" class="lang-btn active" data-lang="fr">Fr</button>
+                    </div>
+
+                    <script src="../js/translation.js"></script>
+
+
                 </ul>
                 <div class="menu-toggle">
                     <i class="fas fa-bars"></i>
@@ -33,6 +45,12 @@
         </div>
     </header>
 
+
+
+
+
+
+    
     <!-- عنوان الصفحة -->
     <section class="page-header">
         <div class="container">
@@ -249,35 +267,6 @@
                 </form>
             </div>
             
-            <!-- تفاصيل الحساب البنكي -->
-            <div id="bank-details" class="bank-details scroll-animation">
-                <h3>تفاصيل الحساب البنكي</h3>
-                <div class="bank-info">
-                    <div class="bank-row">
-                        <span class="bank-label">اسم البنك:</span>
-                        <span class="bank-value">البنك المغربي للتجارة والصناعة</span>
-                    </div>
-                    <div class="bank-row">
-                        <span class="bank-label">اسم الحساب:</span>
-                        <span class="bank-value">جمعية الأمل التنموية</span>
-                    </div>
-                    <div class="bank-row">
-                        <span class="bank-label">رقم الحساب:</span>
-                        <span class="bank-value">XXXXXXXXXXXXXXXX</span>
-                    </div>
-                    <div class="bank-row">
-                        <span class="bank-label">رقم IBAN:</span>
-                        <span class="bank-value">MAXX XXXX XXXX XXXX XXXX XXXX</span>
-                    </div>
-                    <div class="bank-row">
-                        <span class="bank-label">رمز SWIFT:</span>
-                        <span class="bank-value">XXXXXXXX</span>
-                    </div>
-                </div>
-                <div class="bank-note">
-                    <p>ملاحظة: يرجى ذكر اسمك ورقم هاتفك في تفاصيل التحويل، وإرسال إشعار التحويل إلى البريد الإلكتروني: <strong>donations@alamal-association.org</strong></p>
-                </div>
-            </div>
             
             <!-- التبرع العيني -->
             <div id="contact-us" class="in-kind-donation scroll-animation">
@@ -291,11 +280,12 @@
                     <li><i class="fas fa-utensils"></i> مواد غذائية غير قابلة للتلف</li>
                     <li><i class="fas fa-couch"></i> أثاث منزلي</li>
                 </ul>
+               
                 <p>للتبرع بالمواد العينية، يرجى التواصل معنا عبر:</p>
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <span>+212 5XX-XXXXXX</span>
+                        <span>704959711 212+</span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
@@ -330,8 +320,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
-                    <img src="../images/logo.png" alt="شعار الجمعية">
-                    <p>جمعية الأمل التنموية تعمل على تحسين حياة المجتمعات المحلية من خلال مشاريع تنموية مستدامة.</p>
+                    <img src="../img/images.jpeg" alt="شعار الجمعية">
+                    <p>جمعية الأمل  تعمل على تحسين حياة المجتمعات المحلية من خلال مشاريع تنموية مستدامة.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -353,14 +343,14 @@
                 <div class="footer-contact">
                     <h3>تواصل معنا</h3>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> شارع الأمل، حي السلام، المدينة</li>
-                        <li><i class="fas fa-phone"></i> +212 5XX-XXXXXX</li>
+                        <li><i class="fas fa-map-marker-alt"></i>كلية متعددة التخصصات تارودانت</li>
+                        <li><i class="fas fa-phone"></i> 704959711 212+</li>
                         <li><i class="fas fa-envelope"></i> info@alamal-association.org</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>جميع الحقوق محفوظة &copy; 2023 - جمعية الأمل التنموية</p>
+                <p>جميع الحقوق محفوظة &copy; 2025 - جمعية الأمل </p>
             </div>
         </div>
     </footer>
